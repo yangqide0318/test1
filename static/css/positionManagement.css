@@ -1,0 +1,43 @@
+.topBtnT {
+    position: absolute;
+     top:50px;
+    left: 87%;
+}
+.topBtnS {
+    position: absolute;
+    top: 50px;
+    left: 92%;
+}
+button {
+    outline: none;
+}
+
+.table tbody tr td {
+    vertical-align: middle;
+}
+#txtDescribe,#txtDescribe1{
+    width: 400px;
+    height: 80px;
+    margin-left: 75px;
+    margin-top:-20px;
+    outline: none;
+}
+#workName,#workName1{
+    outline: none;
+    width: 400px;
+    height: 40px;
+    margin-left: 20px;
+    border: 1px solid rgb(204,204,204);
+    border-radius: 5px;
+    font-size: 14px;
+}
+.position{
+    width: 500px;
+    height: 130px;
+    /*border: 1px solid red;*/
+}
+.changePos{
+    float: left;
+    margin-top: 20px;
+    margin-left: 73px;
+}

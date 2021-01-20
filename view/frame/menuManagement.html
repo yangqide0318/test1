@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../static/css/employeeManagement.css">
+    <link rel="stylesheet" href="../../static/css/tableStyle.css">
+</head>
+<body class="content_background">
+<!--<div class="main-content content_opacity">-->
+<!--<div class="main-content" style="overflow: hidden">-->
+<!--<div class="row main-content">-->
+<!--<div class="col-sm-12">-->
+<!--<ol class="breadcrumb content_nav_backgroundColor">-->
+<!--<li class="theme">资料管理</li>-->
+<!--<li class="active content_fontColor">员工管理</li>-->
+<!--<li class="search-box"></li>-->
+<!--</ol>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<div class="container-fluid content_opacity">
+    <div class="page-header content_border_none container">
+        <h3 id="employeeLogo" class="content_fontColor">菜单管理</h3>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default content_border_none">
+                <div class="panel-heading content_nav_backgroundColor container-fluid">
+                    <div class="row">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-3">
+                            <div class="form-group" style="position: absolute;">
+                                <select id="lookSelect" class="form-control content_fontColor">
+                                    <option value="1" selected="selected">所有菜单</option>
+                                    <option value="2">菜单编号</option>
+                                    <option value="3">菜名</option>
+                                    <option value="5">价格</option>
+                                </select>
+                            </div>
+
+
+                            <div class="input-group" style="position: absolute;left: 130px;top: 5px;">
+                                <input id="lookInput" type="text" class="form-control content_fontColor" placeholder="请输入...">
+                                <span class="input-group-btn">
+                                    <button id="lookUp" class="btn btn-default content_fontColor" type="button">Go!</button>
+                                </span>
+                            </div><!-- /input-group -->
+
+
+                        </div><!-- /.col-lg-6 -->
+                        <div class="col-lg-2  col-md-2  col-sm-4 col-xs-6 col-xs form-group"
+                             style="float: right;margin-right: -40px">
+
+                            <button id="delEmployee" class="btn content_fontColor" type="button">删除</button>
+                        </div>
+                    </div><!-- /.row -->
+                </div>
+                <div class="panel-body content_table_background table-responsive content_font" style="display: block">
+                    <table class="table  content_table_background">
+                        <thead class="content_fontColor">
+                        <tr>
+                            <th><input id="selectAll" type="checkbox"></th>
+                            <th class="hidden">id</th>
+                            <th>菜单编号</th>
+                            <th>菜名</th>
+                            <th>价格</th>
+                            <th>菜品简介</th>
+                        </tr>
+                        </thead>
+                        <tbody id="employeeTable" class="content_fontColor">
+                        </tbody>
+                    </table>
+                    <div aria-label="Page navigation" class="page">
+                        <div id="btn-page">
+                            <button id="pre" class="btn pageBtn btn-default page"><a href="javascript:void (0)" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></button>
+                            <div id="employeeTablePage"></div>
+                            <button id="next" class="btn pageBtn btn-default page"><a href="javascript:void (0)" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--删除确定模态框-->
+<div class="modal fade" id="delModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            </div>
+            <div class="modal-body" style="text-align: center">
+                <h4 >确定删除吗？</h4>
+                <button type="button" class="btn btn-default" data-dismiss="modal" id="isDel">确定</button>
+                <button type="button" class="btn btn-primary">取消</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<script src="../../static/js/jquery_3.1.1.js"></script>
+<script src="../../static/js/bootstrap.min.js"></script>
+<script src="../../static/js/employee.js"></script>
+</body>
+</html>

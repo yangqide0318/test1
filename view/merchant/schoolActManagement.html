@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>title</title>
+    <link rel="stylesheet" href="../../static/css/schoolActManagement.css">
+    <link rel="stylesheet" href="../../static/fonts/iconfont.css"/>
+    <link rel="stylesheet" href="../../static/css/tableStyle.css">
+</head>
+<body>
+<header class="title">
+    <div align="left" style="padding-left: 15px">
+        <h3>商家活动</h3>
+    </div>
+</header>
+<div class="container-fluid content">
+
+    <div class="modal fade" id="modalOfSchool" tabindex="-1" role="dialog"
+         aria-labelledby="#modalOfSchool">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title text-center" id="modalOfSchoolLabel">xxx</h4>
+                </div>
+                <div class="modal-body clearfix">
+                    <form>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" class="hidden" id="message-schId">
+                            <div class="form-group">
+                                <label for="message-schName" class="control-label">活动名称</label>
+                                <input type="text" class="form-control" id="message-schName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message-schTel" class="control-label">活动时间</label>
+                                <input type="text" class="form-control" id="message-schTel">
+                            </div>
+                            <div class="form-group">
+                                <label for="message-cityName" class="control-label">活动地点</label>
+                                <input type="text" class="form-control" id="message-cityName" required>
+                            </div>
+                        </div>
+                        <div class=" col-md-6 col-sm-6 col-xs-12">
+                            <div class="form-group">
+                                <label for="message-schChargePerson" class="control-label">负责人</label>
+                                <input type="text" class="form-control" id="message-schChargePerson" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message-schChargeDepot" class="control-label">负责部门</label>
+                                <input type="text" class="form-control" id="message-schChargeDepot">
+                            </div>
+                            <div class="form-group">
+                                <label for="message-actDetailTitle" class="control-label">主题</label>
+                                <input type="text" class="form-control" id="message-actDetailTitle">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal" id="submitInf">确认添加</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="img_div">
+
+        <div class="row m-top-md">
+            <div class="col-lg-3 col-sm-6">
+                <div class="statistic-box bg-danger m-bottom-md">
+                    <div class="statistic-title">
+                        今日优惠
+                    </div>
+
+                    <div class="statistic-value">
+                        牦牛肉5折起
+                    </div>
+
+                    <div class="m-top-md">酒水免费</div>
+
+                    <div class="statistic-icon-background">
+                        <i class="ion-eye"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="statistic-box bg-info m-bottom-md">
+                    <div class="statistic-title">
+                        特殊优惠
+                    </div>
+
+                    <div class="statistic-value">
+                        生日消费免单
+                    </div>
+
+                    <div class="m-top-md">新人更优惠</div>
+
+                    <div class="statistic-icon-background">
+                        <i class="ion-ios7-cart-outline"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="statistic-box bg-purple m-bottom-md">
+                    <div class="statistic-title">
+                        本周活动
+                    </div>
+
+                    <div class="statistic-value">
+                        积攒送饮料
+                    </div>
+
+                    <div class="m-top-md">全场啤酒8折</div>
+
+                    <div class="statistic-icon-background">
+                        <i class="ion-person-add"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-sm-6">
+                <div class="statistic-box bg-success m-bottom-md">
+                    <div class="statistic-title">
+                        本月优惠
+                    </div>
+
+                    <div class="statistic-value">
+                        送火锅底料
+                    </div>
+
+                    <div class="m-top-md">优惠多多</div>
+
+                    <div class="statistic-icon-background">
+                        <i class="ion-stats-bars"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-body content_table_background table-responsive content_font" style="display: block">
+            <table class="table  content_table_background">
+                <thead class="content_fontColor">
+                <tr>
+                    <th><input id="selectAll" type="checkbox"></th>
+                    <th class="hidden">id</th>
+                    <th>活动编号</th>
+                    <th>活动日期</th>
+                    <th>活动内容</th>
+
+                </tr>
+                </thead>
+
+                <tbody id="employeeTable" class="content_fontColor">  <!--表格-->
+                </tbody>
+
+
+            </table>
+            <div aria-label="Page navigation" class="page">
+                <div id="btn-page">
+                    <button id="pre" class="btn pageBtn btn-default page"><a href="javascript:void (0)" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></button>
+                    <div id="employeeTablePage"></div>
+                    <button id="next" class="btn pageBtn btn-default page"><a href="javascript:void (0)" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!--翻页-->
+    <div class="text-center" style="padding: 0 0 30px 0">
+        <nav aria-label="Page navigation" class="ul-center" text-aline="center">
+            <ul class="pagination">
+                <li id="pagePrevious">
+            <span aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+            </span>
+                </li>
+                <li>
+                    <span>1</span>
+                </li>
+                <li id="pageNext">
+            <span aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+            </span>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="modal fade" id="delModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                </div>
+                <div class="modal-body" style="text-align: center">
+                    <h4 >确定删除吗？</h4>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" id="isDel">确定</button>
+                    <button type="button" class="btn btn-primary">取消</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <script src="../../static/js/school-activity.js"></script>
+    <script src="../../static/js/jquery_3.1.1.js"></script>
+    <script src="../../static/js/bootstrap.min.js"></script>
+    <script src="../../static/js/employee.js"></script>
+</body>
+</html>

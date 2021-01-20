@@ -1,0 +1,142 @@
+ th {
+    text-align: center;
+}
+.iconfont{
+    border: none;
+    background-color: rgba(0,0,0,0);
+}
+.table-hover.table-striped tr td:last-child button {
+    margin: 0 -5px;
+}
+#a{
+    position: relative;
+    top: 3px;
+    color:#0EBF9C;
+    outline: none;
+}
+#b{
+    outline: none;
+    border: none;
+    color:#8193BC ;
+    background-color: rgba(0,0,0,0);
+}
+#c{
+    outline: none;
+    border: none;
+    color: #e49831;
+}
+#d{
+    outline: none;
+    border: none;
+    color: #e85655;
+}
+#schoolInf td,
+#schoolInf th {
+    vertical-align: middle;
+}
+#schoolInf>tr:hover td{
+    color: #0EBF9C;
+}
+.modal-body input:not(:first-child), .modal-body select, .modal-body textarea {
+    width: calc(100% - 100px) !important;
+    display: inline-block !important;
+    float: right;
+}
+@media (max-width: 768px) {
+    #modalOfSchool .modal-dialog {
+        width: 450px !important;
+        margin: 30px auto;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 820px) {
+    #modalOfSchool .modal-dialog {
+        width: 700px !important;
+    }
+}
+
+@media screen and (min-width: 820px) {
+    #modalOfSchool .modal-dialog {
+        width: 800px !important;
+    }
+}
+
+#modalOfSchool {
+    padding: 0 !important;
+}
+#modalLookActive.modal-dialog{
+    width: 800px !important;
+}
+#modalLookActive{
+    padding: 0 !important;
+}
+/*#modalOfSchool .modal-body .form-group label{*/
+/*letter-spacing: .5px;*/
+/*}*/
+#modalOfSchool {
+    margin-bottom: 0;
+}
+
+#modalOfSchoolLabel {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/*#message-schDescribe {*/
+/*margin-bottom: 29px !important;*/
+/*}*/
+
+#message-schDescribe, #message-schApplyOpinion, #schCRContent {
+    vertical-align: auto;
+    resize: none;
+}
+
+input:read-only, textarea:read-only {
+
+}
+
+#modalOfSchool .modal-footer {
+    padding-left: 27px;
+    padding-right: 27px;
+}
+
+#getMoreSchoolInf span {
+    font-size: 8px;
+}
+
+.modal-body .form-group {
+    overflow: hidden;
+}
+
+.modal-body .form-group label {
+    float: left;
+    text-align: right;
+    width: 84px !important;
+    line-height: 34px;
+}
+
+.modal-body .form-group input {
+    float: right;
+}
+
+#Approval, #Reject {
+    display: none;
+}
+
+#modalOfSchoolActivity .modal-body,
+#modalOfSchoolActivity .modal-footer{
+    padding-right: 50px !important;
+}
+#modalOfSchoolActivity .form-group label {
+    width: 70px !important;
+}
+
+@media (min-width: 450px) {
+    .modal-dialog {
+        width: 800px !important;
+        margin: 30px auto !important;
+    }
+}
+#ComRecord{
+    display: none;
+}

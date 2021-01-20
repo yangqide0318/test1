@@ -1,0 +1,89 @@
+/*
+输入框长度
+*/
+
+/*
+模态框样式
+
+*/
+body{
+    background: #f5f5f5;
+}
+#pagePosition{
+    width: 200px;
+    bottom: 0;
+    margin: auto;
+}
+#editDepartment{
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    position: absolute;
+    top:0;
+    right: 0;
+    left:0;
+    bottom: 0;
+background-color: white;
+padding: 50px 20px;
+}
+
+#txtDepartment,#txtSetTime {
+
+    outline: none;
+    background-color: rgba(0,0,0,0);
+    border: none;
+    text-shadow: none;
+    box-shadow: none;
+}
+.modal-body input:not(:first-child) {
+    width: calc(100% - 100px) ;
+    display: inline-block ;
+}
+
+.modal-body label{
+    width:65px;
+    text-align: right;
+    margin-right: 20px;
+}
+.modal-body textarea{
+    width: calc(100% - 100px) ;
+    display: inline-block ;
+}
+
+.addModal-footer{
+    border:none;
+}
+
+.labFloat{
+    float:left;
+}
+
+
+
+
+/*移入表格的样式*/
+.container-fluid tbody tr:hover{
+    color:#0ebf9c;
+}
+
+/*添加和修改的按钮颜色*/
+#btnAddForm{
+    border: none;
+    background-color: #e49831;
+
+}
+
+#btnEditForm{
+    border: none;
+    background-color: #c9302c;
+}
+
+/*  下拉框与搜索框之间的距离*/
+#distance{
+    margin-left: 20px;
+}
+
+#tableHeight{
+    padding-top: 20px;
+}
+

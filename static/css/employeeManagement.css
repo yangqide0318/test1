@@ -1,0 +1,178 @@
+@font-face {
+    font-family: employeeFont;
+    src: url("../fonts/iconfont.woff");
+}
+.font{
+    font-family: employeeFont;
+    font-size: 20px;
+    cursor: pointer;
+}
+.theme{
+    color: #0ebf9c;
+}
+.breadcrumb > li + li:last-child:before{
+    content: "";
+}
+.breadcrumb{
+    margin-bottom: 0!important;
+}
+.search-box{
+    float: right;
+    position: relative;
+}
+.sidebar-search{
+    border-radius: 30px;
+    position: absolute;
+    right: 10px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: inline-block;
+    min-height: 28px;
+    min-width: 28px;
+    background-color: #E4E5E6;
+    height: 30px!important;
+    vertical-align: middle;
+}
+.form-group{
+    margin-top: 5px;
+}
+/*所有输入框样式*/
+input{
+    border-radius: 5px;
+    background-color: rgba(0,0,0,.0);
+    outline: none;
+    padding-left: 10px;
+}
+.sidebar-search .form-group input{
+    border: none;
+    width: 130px;
+}
+.submit{
+    position: absolute;
+    top: 6px;
+    right: 5px;
+    border: 0;
+    background-color: rgba(0,0,0,.0);
+    outline: none;
+}
+.page-header{
+    margin: 0!important;
+}
+table>thead>tr>th {
+    text-align: center;
+}
+table>tbody>tr>th{
+    text-align: center;
+}
+td{
+    text-align: center;
+}
+/*页面样式*/
+/*内容背景*/
+/*.content_background{*/
+    /*background-color: #0d121c;*/
+/*}*/
+/*内容透明度*/
+.content_opacity{
+    opacity: .98;
+}
+/*!*菜单背景和表格背景颜色*!*/
+/*.content_nav_backgroundColor{*/
+    /*background-color: #151e29!important;*/
+/*}*/
+/*!*表格背景颜色*!*/
+/*.content_table_background{*/
+    /*background-color: #151e29!important;*/
+/*内容无边框*/
+.content_border_none{
+    border: none!important;
+}
+/*内容字体颜色*/
+/*下拉框样式*/
+#lookSelect{
+    background-color: rgba(0,0,0,0);
+    border-color: #d6dfeb;
+}
+#lookSelect option{
+    /*background-color: rgba(21,30,41,1);*/
+    /*border:none;*/
+}
+#lookInput{
+    background-color: rgba(0,0,0,0);
+    border-color: #d6dfeb;
+}
+/*go样式*/
+.input-group-btn #lookUp{
+    background-color: rgba(0,0,0,0)!important;
+    /*border-color: #d6dfeb!important;*/
+}
+/*添加删除样式*/
+#delEmployee{
+    background-color:#e85655 ;
+    outline: none;
+    color: #f5f5f5;
+}
+.panel-default>.panel-heading{
+    background-color: #fff !important;
+}
+/*添加*/
+#addEmployee{
+    background-color: #e49831;
+    outline: none;
+    color: #f5f5f5;
+}
+/*编辑*/
+.employeeEdit{
+    color: #8193bc;
+}
+/*删除*/
+.employeeDel{
+    color: #e85655;
+}
+/*查看*/
+.employeeLook{
+    color: #0ebf9c;
+}
+#employeeTable tr:hover{
+    /*background-color: #0596e7!important;*/
+    color: #0ebf9c!important;
+    border-color: rgba(1,1,1,0)!important;
+}
+#employeeTable tr:hover .name{
+    color: #0ebf9c!important;
+}
+#employeeTable tr:hover .department{
+    color: #0ebf9c!important;
+}
+/*模态框*/
+.pageBtn{
+    margin-left: 10px;
+}
+#employeeTablePage{
+    display: inline-block;
+}
+.page{
+    text-align: center;
+}
+#btn-page{
+    display: inline-block;
+}
+/*页码被选中背景样式*/
+.btn-primary:active {
+    background-color: green !important;
+}
+.modal-title{
+    text-align: center;
+}
+.addInput{
+    -web-kit-appearance:none;
+    -moz-appearance: none;
+    border: 1px solid #d6dfeb;
+    /*width: 100px;*/
+}
+.editInput{
+    -web-kit-appearance:none;
+    -moz-appearance: none;
+    border: 1px solid #d6dfeb;
+}

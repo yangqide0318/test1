@@ -1,0 +1,49 @@
+.table th{
+    text-align: center;
+}
+#main{
+    padding-top: 50px;
+}
+.divright{
+    width: calc(90% - 240px);
+    height: 400px;
+    position: absolute;
+    right: 5%;
+    top: 20px;
+}
+
+#selectCity{
+    width: 100px;
+    height: 30px;
+}
+/*.cities{*/
+    /*font-size: 18px;*/
+/*}*/
+.dropdowns{
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.divright1{
+    width: calc(90% - 240px);
+    height: 400px;
+    position: absolute;
+    right: 5%;
+    top: 20px;
+}
+.mention{
+    margin-left: 30px;
+    color: gray;
+}
+.panel-heading{
+    background-color: #F5F4F9!important;
+    background-repeat: repeat-x;
+    border-bottom: 1px solid #CDCDCD;
+    border-radius:6px 6px 0 0;
+    box-shadow:0 1px 0 #fff inset;
+    height: 35px;
+    text-align: center;
+    font-weight: bolder;
+}
+#main1{
+    padding-top: 50px;
+}

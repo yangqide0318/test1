@@ -1,0 +1,30 @@
+#navLogo > span > img {
+    width: auto;
+    height: 35px;
+}
+
+.pull-right.font-18 {
+    height: 18px;
+}
+
+.pull-right.font-18 span {
+    font-size: 12px !important;
+    position: relative;
+    top: -2px;
+    margin-left: 5px;
+}
+
+.todayUser > i {
+    font-weight: lighter !important;
+}
+
+.maskSpecial {
+    margin-top: 40px !important;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .05);
+    border: 1px solid #e6e6e6;
+}
+.chatAndTask .smart-widget:nth-of-type(3){
+    height: 375px ;
+}

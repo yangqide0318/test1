@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+    <meta charset="UTF-8">
+    <meta content="text/html" charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/css/style1.css">
+    <link rel="stylesheet" href="../../static/css/tableStyle.css">
+    <title></title>
+</head>
+<body>
+<div class="text-center">
+    <div class="container-fluid">
+        <div class="col-md-12 col-xs-12" align="left">
+            <h3>班级一览</h3>
+        </div>
+    <div class="row">
+        <div class="col-lg-12 col-md-8  col-sm-4 col-xs-2">
+    <div id="main" style="height: 500px; width: 100%"></div>
+        </div>
+    </div>
+    </div>
+    <div style="margin-top: 40px">
+        <div class="panel-heading">
+            <i class="clip-bars"></i> 地区统计
+            <!--<div class="panel-tools">-->
+                <!--<a class="btn btn-xs btn-link panel-collapse collapses" href="#">-->
+                <!--</a>-->
+                <!--<a class="btn btn-xs btn-link panel-config" href="#" data-toggle="modal">-->
+                    <!--<i class="fa fa-wrench"></i>-->
+                <!--</a>-->
+                <!--<a class="btn btn-xs btn-link panel-refresh" href="#">-->
+                    <!--<i class="fa fa-refresh"></i>-->
+                <!--</a>-->
+                <!--<a class="btn btn-xs btn-link panel-close" href="#">-->
+                    <!--<i class="fa fa-times"></i>-->
+                <!--</a>-->
+            <!--</div>-->
+        </div>
+        <table class="table table-bordered table-hover table-responsive">
+        <thead>
+        <tr>
+            <th>城市名称</th>
+            <th>录入学校</th>
+            <th>接洽中的学校</th>
+            <th>待审学校</th>
+            <th>审核未通过学校</th>
+            <th>推广开展学校</th>
+        </tr>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+    </div>
+</div>
+<script src="../../static/js/jquery_3.1.1.js"></script>
+<script src="../../static/js/echarts.js"></script>
+<script  type="text/javascript">
+    var myChart = echarts.init(document.getElementById("main"));
+    setTimeout(function () {
+        option = {
+            legend: {},
+            tooltip: {
+                trigger: 'axis',
+                showContent: false
+            },
+            dataset: {
+                source: [
+                    ['城市名称', '成都', '重庆', '北京', '上海', '广东', '深圳'],
+                    ['录入学校', 80, 60, 50, 40, 70, 90],
+                    ['接洽中的学校', 30, 20, 20, 30, 40, 50],
+                    ['待审学校', 10, 10, 10, 10, 5, 80],
+                    ['审核未通过的学校', 10, 10, 5, 0, 10, 39],
+                    ['推广开展的学校', 30, 20, 15, 5, 15, 10]
+                ]
+            },
+            xAxis: {type: 'category'},
+            yAxis: {gridIndex: 0},
+            grid: {top: '55%'},
+            series: [
+                {type: 'line', smooth: true, seriesLayoutBy: 'row'},
+                {type: 'line', smooth: true, seriesLayoutBy: 'row'},
+                {type: 'line', smooth: true, seriesLayoutBy: 'row'},
+                {type: 'line', smooth: true, seriesLayoutBy: 'row'},
+                {type: 'line', smooth: true, seriesLayoutBy: 'row'},
+                {
+                    type: 'pie',
+                    id: 'pie',
+                    radius: '30%',
+                    center: ['50%', '25%'],
+                    label: {
+                        formatter: '{b}: {@成都} ({d}%)'
+                    },
+                    encode: {
+                        itemName: 'product',
+                        value: '成都',
+                        tooltip: '成都'
+                    }
+                }
+            ]
+        };
+
+        myChart.on('updateAxisPointer', function (event) {
+            var xAxisInfo = event.axesInfo[0];
+            if (xAxisInfo) {
+                var dimension = xAxisInfo.value + 1;
+                myChart.setOption({
+                    series: {
+                        id: 'pie',
+                        label: {
+                            formatter: '{b}: {@[' + dimension + ']} ({d}%)'
+                        },
+                        encode: {
+                            value: dimension,
+                            tooltip: dimension
+                        }
+                    }
+                });
+            }
+        });
+
+        myChart.setOption(option);
+
+    });
+    DataInforPutIn();
+    function DataInforPutIn(){
+        let infBox = $("#tbody");
+        for(let i=0;i<cityArray.length;i++){
+            infBox.append(`<tr>
+            <td class="hidden">${cityArray[i].cityId}</td>
+            <td>${cityArray[i].cityName}</td>
+            <td>${cityArray[i].citySchNum}</td>
+            <td>${cityArray[i].cityContactSchNum}</td>
+            <td>${cityArray[i].cityPendingSchNum}</td>
+            <td>${cityArray[i].cityAuditFailedSchNum}</td>
+            <td>${cityArray[i].cityPDschNum}</td>
+        </tr>`)
+        }
+    }
+
+</script>
+</body>
+</html>

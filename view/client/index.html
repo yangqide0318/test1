@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Simplify Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- 防止缓存出现,避免绕过认证 -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <!-- Bootstrap core CSS -->
+    <link href="../../static/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="../../static/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- ionicons -->
+    <link href="../../static/css/ionicons.min.css" rel="stylesheet">
+
+    <!-- Morris -->
+    <link href="../../static/css/morris.css" rel="stylesheet"/>
+
+    <!-- Datepicker -->
+    <link href="../../static/css/datepicker.css" rel="stylesheet"/>
+
+    <!-- Animate -->
+    <link href="../../static/css/animate.min.css" rel="stylesheet">
+
+    <!-- Owl Carousel -->
+    <link href="../../static/css/owl.carousel.min.css" rel="stylesheet">
+    <link href="../../static/css/owl.theme.default.min.css" rel="stylesheet">
+
+    <!-- Simplify -->
+    <link href="../../static/css/simplify.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/css/index.css">
+
+
+</head>
+
+<body class="overflow-hidden">
+<div class="wrapper preload">
+    <header class="top-nav">
+        <div class="top-nav-inner">
+            <div class="nav-header">
+                <button type="button" class="navbar-toggle pull-left sidebar-toggle" id="sidebarToggleSM">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <ul class="nav-notification pull-right">
+                    <li>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cog fa-lg"></i></a>
+                        <span class="badge badge-danger bounceIn">1</span>
+                        <ul class="dropdown-menu dropdown-sm pull-right user-dropdown">
+                            <li class="user-avatar">
+                                <img src="../../static/images/profile/profile1.jpg" alt="" class="img-circle">
+                                <div class="user-content">
+                                    <h5 class="no-m-bottom">Jane Doe</h5>
+                                    <div class="m-top-xs">
+                                        <a href="" class="m-right-sm">Profile</a>
+
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="">
+                                    Inbox
+                                    <span class="badge badge-danger bounceIn animation-delay2 pull-right">1</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Notification
+                                    <span class="badge badge-purple bounceIn animation-delay3 pull-right">2</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="sidebarRight-toggle">
+                                    Message
+                                    <span class="badge badge-success bounceIn animation-delay4 pull-right">7</span>
+                                </a>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <a href="#">Setting</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <a href="index.html" class="brand" id="navLogo">
+                    <span><img src="../../static/images/nav-logo.png" alt=""></span><span class="brand-name">外卖订餐</span>
+                </a>
+            </div>
+            <div class="nav-container">
+                <button type="button" class="navbar-toggle pull-left sidebar-toggle" id="sidebarToggleLG">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <ul class="nav-notification">
+                    <li class="search-list">
+                        <div class="search-input-wrapper">
+                            <div class="search-input">
+                                <input type="text" class="form-control input-sm inline-block">
+                                <a href="#" class="input-icon text-normal"><i class="ion-ios7-search-strong"></i></a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="pull-right m-right-sm">
+                    <div class="user-block hidden-xs">
+                        <a href="#" id="userToggle" data-toggle="dropdown">
+                            <img src="../../static/images/userheadShot.jpg" alt="" class="img-circle inline-block user-profile-pic">
+                            <div class="user-detail inline-block">
+                                小朋
+                                <i class="fa fa-angle-down"></i>
+                            </div>
+                        </a>
+                        <div class="panel border dropdown-menu user-panel">
+                            <div class="panel-body paddingTB-sm">
+                                <ul>
+                                    <li>
+                                        <a href="../login/logreg.html"> <i class="fa fa-exchange fa-lg"></i><span class="m-left-xs">切换账号</span></a>
+
+
+                                    </li>
+                                    </link>
+
+                                    <li>
+                                        <a href="login.html">
+                                            <i class="fa fa-power-off fa-lg"></i><span class="m-left-xs">退出此账号</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="nav-notification">
+                        <li>
+                            <a href="#" data-toggle="dropdown"><i class="fa fa-envelope fa-lg"></i></a>
+                            <span class="badge badge-purple bounceIn animation-delay5 active">2</span>
+                            <ul class="dropdown-menu message pull-right">
+                                <li><a>你有四条未读信息</a></li>
+                                <li>
+                                    <a class="clearfix" href="#">
+                                        <img src="../../static/images/profile/profile2.jpg" alt="User Avatar">
+                                        <div class="detail">
+                                            <strong>玮哥</strong>
+                                            <p class="no-margin">
+                                                我马上就到!!!
+                                            </p>
+                                            <small class="text-muted"><i class="fa fa-check text-success"></i> 27分钟前
+                                            </small>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="clearfix" href="#">
+                                        <img src="../../static/images/profile/profile3.jpg" alt="User Avatar">
+                                        <div class="detail">
+                                            <strong>涛哥</strong>
+                                            <p class="no-margin">
+                                                我眯一会儿...
+                                            </p>
+                                            <small class="text-muted"><i class="fa fa-check text-success"></i> 5小时前
+                                            </small>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="clearfix" href="#">
+                                        <img src="../../static/images/profile/profile4.jpg" alt="User Avatar">
+                                        <div class="detail m-left-sm">
+                                            <strong>雷羽</strong>
+                                            <p class="no-margin">
+                                                这个方案也行
+                                            </p>
+                                            <small class="text-muted"><i class="fa fa-reply"></i> 昨天</small>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="clearfix" href="#">
+                                        <img src="../../static/images/profile/profile5.jpg" alt="User Avatar">
+                                        <div class="detail">
+                                            <strong>良哥</strong>
+                                            <p class="no-margin">
+                                                我眼睛痛,请个假!
+                                            </p>
+                                            <small class="text-muted"><i class="fa fa-reply"></i> 9天前</small>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li><a href="#">查看所有信息</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="dropdown"><i class="fa fa-bell fa-lg"></i></a>
+                            <span class="badge badge-info bounceIn animation-delay6 active">4</span>
+                            <ul class="dropdown-menu notification dropdown-3 pull-right">
+                                <li><a href="#">你有五个新通知</a></li>
+                                <li>
+                                    <a href="#">
+												<span class="notification-icon bg-warning">
+													<i class="fa fa-warning"></i>
+												</span>
+                                        <span class="m-left-xs">服务器#1未响应</span>
+                                        <span class="time text-muted">现在</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+												<span class="notification-icon bg-success">
+													<i class="fa fa-plus"></i>
+												</span>
+                                        <span class="m-left-xs">有新活动申请</span>
+                                        <span class="time text-muted">2分钟前</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+												<span class="notification-icon bg-danger">
+													<i class="fa fa-bolt"></i>
+												</span>
+                                        <span class="m-left-xs">请求报错</span>
+                                        <span class="time text-muted">5分钟前</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+												<span class="notification-icon bg-success">
+													<i class="fa fa-usd"></i>
+												</span>
+                                        <span class="m-left-xs">新增两个会员</span>
+                                        <span class="time text-muted">1小时前</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+												<span class="notification-icon bg-success">
+													<i class="fa fa-plus"></i>
+												</span>
+                                        <span class="m-left-xs">新用户注册</span>
+                                        <span class="time text-muted">1小时前</span>
+                                    </a>
+                                </li>
+                                <li><a href="#">查看所有通知</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div><!-- ./top-nav-inner -->
+    </header>
+    <aside class="sidebar-menu fixed">
+        <div class="sidebar-inner scrollable-sidebar">
+            <div class="main-menu">
+                <ul class="accordion">
+                    <li class="menu-header">
+                        主菜单
+                    </li>
+                    <li class="bg-palette1 active">
+                        <a href="index.html">
+									<span class="menu-content block">
+										<span class="menu-icon"><i class="block fa fa-home fa-lg"></i></span>
+										<span class="text m-left-sm">主页</span>
+									</span>
+                            <span class="menu-content-hover block">
+										主页
+									</span>
+                        </a>
+                    </li>
+                    <li class="openable bg-palette3">
+                        <a >
+									<span class="menu-content block">
+										<span class="menu-icon"><i class="block fa fa-list fa-lg"></i></span>
+										<span class="text m-left-sm">订单管理</span>
+										<span class="submenu-icon"></span>
+									</span>
+                            <span class="menu-content-hover block">
+										Form
+									</span>
+                        </a>
+                        <ul class="submenu bg-palette3">
+                            <li ><a  id="employeeManagement"><span class="submenu-label">订单详情</span></a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                    <li class="openable bg-palette5">
+                        <a >
+									<span class="menu-content block">
+										<span class="menu-icon"><i class="block fa fa-list fa-lg"></i></span>
+										<span class="text m-left-sm">菜单管理</span>
+										<span class="submenu-icon"></span>
+									</span>
+                            <span class="menu-content-hover block">
+										Form
+									</span>
+                        </a>
+                        <ul class="submenu bg-palette3">
+                            <li ><a  id="menuManagement"><span class="submenu-label">菜单详情</span></a></li>
+                            
+                        </ul>
+                    </li>
+                    
+                   <!-- <li class="openable bg-palette2">
+                        <a href="#">
+									<span class="menu-content block">
+										<span class="menu-icon"><i class="block fa fa-tags fa-lg"></i></span>
+										<span class="text m-left-sm">商家管理</span>
+										<span class="submenu-icon"></span>
+									</span>
+                            <span class="menu-content-hover block">
+										UI Kits
+									</span>
+                        </a>
+                        <ul class="submenu">
+                            <li><a id="schoolActManagement"><span class="submenu-label">商家活动</span></a></li>
+&lt;!&ndash;                            <li class="openable">
+                                <a>
+                                    <span class="submenu-label" id="schManagement">商家管理</span>
+                                </a>
+                                
+                            </li>&ndash;&gt;
+                        </ul>
+                    </li>-->
+
+                    <li class="openable bg-palette4">
+                        <a >
+									<span class="menu-content block">
+										<span class="menu-icon"><i class="block fa fa-gift fa-lg"></i></span>
+										<span class="text m-left-sm">用户管理</span>
+										<span class="submenu-icon"></span>
+									</span>
+                            <span class="menu-content-hover block">
+										Pages
+									</span>
+                        </a>
+                        <ul class="submenu">
+                            <li><a  id="stuManagement"><span class="submenu-label">用户管理</span></a></li>
+                 
+                        </ul>
+                    </li>
+
+                    <!--<li class="openable bg-palette2">
+                        <a >
+									<span class="menu-content block">
+										<span class="menu-icon"><i class="block fa fa-truck fa-lg"></i></span>
+										<span class="text m-left-sm">骑手管理</span>
+										<span class="submenu-icon"></span>
+									</span>
+                            <span class="menu-content-hover block">
+										骑手
+									</span>
+                        </a>
+&lt;!&ndash;                        <ul class="submenu">
+                            <li><a  id="courierManagement"><span class="submenu-label">骑手管理</span></a></li>
+
+                        </ul>&ndash;&gt;
+                    </li>-->
+
+                    <!--<li class="openable bg-palette3">
+                        <a href="#">
+									<span class="menu-content block">
+										<span class="menu-icon"><i class="block fa fa-list fa-lg"></i></span>
+										<span class="text m-left-sm">后台管理</span>
+										<span class="submenu-icon"></span>
+									</span>
+                            <span class="menu-content-hover block">
+										Menu
+									</span>
+                        </a>
+                        <ul class="submenu">
+                            <li class="openable">
+                                <a id="areaCounts">
+                                    <span class="submenu-label" >地区统计</span>
+                                    <small class="badge badge-success badge-square bounceIn animation-delay2 m-left-xs pull-right">
+                                        3
+                                    </small>
+                                </a>
+                            </li>
+                           
+                        </ul>
+                    </li>-->
+                    <li class="bg-palette1">
+                        <a href="">
+									<span class="menu-content block">
+										<span class="menu-icon"><i class="block fa fa-envelope fa-lg"></i></span>
+										<span class="text m-left-sm">收件箱</span>
+										<small class="badge badge-danger badge-square bounceIn animation-delay5 m-left-xs">5</small>
+									</span>
+                            <span class="menu-content-hover block">
+										收件箱
+									</span>
+                        </a>
+                    </li>
+                    <li class="bg-palette2">
+                        <a href="">
+									<span class="menu-content block">
+										<span class="menu-icon"><i class="block fa fa-clock-o fa-lg"></i></span>
+										<span class="text m-left-sm">时间线</span>
+										<small class="badge badge-warning badge-square bounceIn animation-delay6 m-left-xs pull-right">7</small>
+									</span>
+                            <span class="menu-content-hover block">
+										时间线
+									</span>
+                        </a>
+                    </li>
+                    <li class="menu-header">
+                        Others
+                    </li>
+                </ul>
+            </div>
+            <div class="sidebar-fix-bottom clearfix">
+                <div class="user-dropdown dropup pull-left">
+                    <a href="javascript:void(0)" title="用户设置" class="dropdwon-toggle font-18" data-toggle="dropdown"><i
+                            class="ion-person-add"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#">
+                                收件箱
+                                <span class="badge badge-danger bounceIn animation-delay2 pull-right">1</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                通知
+                                <span class="badge badge-purple bounceIn animation-delay3 pull-right">2</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="sidebarRight-toggle">
+                                消息
+                                <span class="badge badge-success bounceIn animation-delay4 pull-right">7</span>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#">设置</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="lockscreen.html" title="上锁需秘密解锁" class="pull-right font-18"><i
+                        class="ion-log-out"></i><span>锁定</span></a>
+            </div>
+        </div><!-- sidebar-inner -->
+    </aside>
+
+    <div class="main-container">
+        <div class="padding-md">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="page-title">
+                        外卖
+                    </div>
+                    <div class="page-sub-header">
+                        欢迎使用, 小朋, <i class="fa fa-map-marker text-danger"></i> 西华大学
+                    </div>
+                </div>
+                <div class="col-sm-6 text-right text-left-sm p-top-sm">
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            搜索图表 <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu pull-right" role="menu">
+                            <li><a href="#">菜单</a></li>
+                            <li><a href="#">用户图表菜单</a></li>
+                            <li><a href="#">天气菜单</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">设置</a></li>
+                        </ul>
+                    </div>
+
+                    <a class="btn btn-default"><i class="fa fa-cog"></i></a>
+                </div>
+            </div>
+
+            <div class="row m-top-md">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="statistic-box bg-danger m-bottom-md">
+                        <div class="statistic-title">
+                            猜你喜欢
+                        </div>
+
+                        <div class="statistic-value">
+                            美团外卖
+                        </div>
+
+                        <div class="m-top-md">同类商家智能优选</div>
+
+                        <div class="statistic-icon-background">
+                            <i class="ion-eye"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="statistic-box bg-info m-bottom-md">
+                        <div class="statistic-title">
+                            朋友聚餐首选
+                        </div>
+
+                        <div class="statistic-value">
+                            团购优惠
+                        </div>
+
+                        <div class="m-top-md">欢乐同分享</div>
+
+                        <div class="statistic-icon-background">
+                            <i class="ion-ios7-cart-outline"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="statistic-box bg-purple m-bottom-md">
+                        <div class="statistic-title">
+                            时间紧张？
+                        </div>
+
+                        <div class="statistic-value">
+                            上店自取
+                        </div>
+
+                        <div class="m-top-md">更快的优质生活</div>
+
+                        <div class="statistic-icon-background">
+                            <i class="ion-person-add"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="statistic-box bg-success m-bottom-md">
+                        <div class="statistic-title">
+                            来个约定？
+                        </div>
+
+                        <div class="statistic-value">
+                            订餐服务
+                        </div>
+
+                        <div class="m-top-md">让约会如约而至</div>
+
+                        <div class="statistic-icon-background">
+                            <i class="ion-stats-bars"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row chatAndTask">
+            	
+            	
+            	
+            	
+                <div class="col-lg-6">
+                    <div class="smart-widget widget-dark-blue" >
+                        <div class="smart-widget-header"style="background-color:gold;">
+                            披萨同分享
+                            <span class="smart-widget-option todayUser">
+										<img src="../../static/images/pisa.jpg" width="600px" height="240px"/>
+			                        </span>
+                        </div>    
+                    </div><!-- ./smart-widget -->
+                </div><!-- ./col -->
+                
+                
+                
+                <div class="col-lg-6">
+                    <div class="smart-widget widget-dark-blue">
+                        <div class="smart-widget-header">
+                            下午茶
+                            <span class="smart-widget-option">
+										<img src="../../static/images/xiawucha.jpg" width="600px" height="240px"/>
+			                        </span>
+                        </div>
+                     
+                    </div><!-- ./smart-widget -->
+                </div><!-- ./col -->
+            </div>
+            
+            
+            
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="smart-widget">
+                                <div class="smart-widget-header">
+                                    <i class="fa fa-calendar m-right-xs"></i>未完成订单
+                                    <span class="smart-widget-option">
+												<span class="refresh-icon-animated">
+													<i class="fa fa-circle-o-notch fa-spin"></i>
+												</span>
+					                            <a href="#" class="widget-toggle-hidden-option">
+					                                <i class="fa fa-cog"></i>
+					                            </a>
+					                            <a href="#" class="widget-collapse-option" data-toggle="collapse">
+					                                <i class="fa fa-chevron-up"></i>
+					                            </a>
+					                            <a href="#" class="widget-refresh-option">
+					                                <i class="fa fa-refresh"></i>
+					                            </a>
+					                            <a href="#" class="widget-remove-option">
+					                                <i class="fa fa-times"></i>
+					                            </a>
+					                        </span>
+                                </div>
+                                <div class="smart-widget-inner">
+                                    <div class="smart-widget-body no-padding bg-grey">
+                                        <p id="calendar" class="custom-calendar no-margin full-width"></p>
+                                    </div>
+                                    <ul class="list-group no-border">
+                                        <li class="list-group-item">
+                                            炒面
+                                            <span class="badge badge-success">19:30</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            火锅
+                                            <span class="badge badge-danger">21:15</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            烧烤
+                                            <span class="badge badge-danger">8:15</span>
+                                        </li>
+                                        <li class="list-group-item">
+                                            奶茶
+                                            <span class="badge badge-danger">11:15</span>
+                                        </li>
+                                        <li class="list-group-item">
+                 龙虾                        
+                                            <span class="badge badge-danger">21:15</span>
+                                        </li>
+                                    </ul>
+                                </div><!-- ./smart-widget-inner -->
+                            </div><!-- ./smart-widget -->
+                        </div><!-- ./col -->
+                        <div class="col-lg-6">
+                            <div class="smart-widget widget-purple">
+                                <div class="smart-widget-header">
+                                    <i class="fa fa-comment"></i> 骑手消息
+                                    <span class="smart-widget-option">
+												<span class="refresh-icon-animated">
+													<i class="fa fa-circle-o-notch fa-spin"></i>
+												</span>
+					                            <a href="#" class="widget-toggle-hidden-option">
+					                                <i class="fa fa-cog"></i>
+					                            </a>
+					                            <a href="#" class="widget-collapse-option" data-toggle="collapse">
+					                                <i class="fa fa-chevron-up"></i>
+					                            </a>
+					                            <a href="#" class="widget-refresh-option">
+					                                <i class="fa fa-refresh"></i>
+					                            </a>
+					                            <a href="#" class="widget-remove-option">
+					                                <i class="fa fa-times"></i>
+					                            </a>
+					                        </span>
+                                </div>
+                                <div class="smart-widget-inner">
+                                    <div class="smart-widget-hidden-section">
+                                        <ul class="widget-color-list clearfix">
+                                            <li style="background-color:#20232b;" data-color="widget-dark"></li>
+                                            <li style="background-color:#4c5f70;" data-color="widget-dark-blue"></li>
+                                            <li style="background-color:#23b7e5;" data-color="widget-blue"></li>
+                                            <li style="background-color:#2baab1;" data-color="widget-green"></li>
+                                            <li style="background-color:#edbc6c;" data-color="widget-yellow"></li>
+                                            <li style="background-color:#fbc852;" data-color="widget-orange"></li>
+                                            <li style="background-color:#e36159;" data-color="widget-red"></li>
+                                            <li style="background-color:#7266ba;" data-color="widget-purple"></li>
+                                            <li style="background-color:#f5f5f5;" data-color="widget-light-grey"></li>
+                                            <li style="background-color:#fff;" data-color="reset"></li>
+                                        </ul>
+                                    </div>
+                                    <div class="smart-widget-body">
+                                        <div id="chatScroll">
+                                            <ul class="chat">
+                                                <li class="left clearfix">
+															<span class="chat-img pull-left">
+																<img src="../../static/images/profile/profile2.jpg"
+                                                                     alt="User Avatar">
+															</span>
+                                                    <div class="chat-body clearfix">
+                                                        <div class="header">
+                                                            <strong class="primary-font">骑手</strong>
+                                                            <small class="pull-right text-muted"><i
+                                                                    class="fa fa-clock-o"></i> 12分钟前
+                                                            </small>
+                                                        </div>
+                                                        <p>
+                                                            你别急,我马上就到,马上!
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li class="right clearfix">
+															<span class="chat-img pull-right">
+																<img src="../../static/images/profile/profile3.jpg"
+                                                                     alt="User Avatar">
+															</span>
+                                                    <div class="chat-body clearfix">
+                                                        <div class="header">
+                                                            <strong class="primary-font">我</strong>
+                                                            <small class="pull-right text-muted"><i
+                                                                    class="fa fa-clock-o"></i> 13分钟前
+                                                            </small>
+                                                        </div>
+                                                        <p>
+                                                            我要去喝酒了.但我不能迟到，我发过四的
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li class="left clearfix">
+															<span class="chat-img pull-left">
+																<img src="../../static/images/profile/profile2.jpg"
+                                                                     alt="User Avatar">
+															</span>
+                                                    <div class="chat-body clearfix">
+                                                        <div class="header">
+                                                            <strong class="primary-font">骑手</strong>
+                                                            <small class="pull-right text-muted"><i
+                                                                    class="fa fa-clock-o"></i> 20分钟前
+                                                            </small>
+                                                        </div>
+                                                        <p>
+                                                            那好吧,我还是马上就到.
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="smart-widget-footer">
+                                        <div class="input-group">
+                                            <input id="btn-input" type="text" class="form-control input-sm"
+                                                   placeholder="在这里编辑你的消息...">
+                                            <span class="input-group-btn">
+														<button class="btn btn-success btn-sm no-shadow" id="btn-chat">发送</button>
+													</span>
+                                        </div><!-- /input-group -->
+                                    </div><!-- ./smart-widget-footer -->
+                                </div><!-- ./smart-widget-inner -->
+                            </div><!-- ./smart-widget -->
+                        </div><!-- ./col -->
+                    </div><!-- ./row -->
+
+                    <div class="smart-widget">
+                        <div class="smart-widget-header">
+                            商家销量排行榜
+                            <span class="smart-widget-option">
+										<span class="refresh-icon-animated">
+											<i class="fa fa-circle-o-notch fa-spin"></i>
+										</span>
+			                            <a href="#" class="widget-toggle-hidden-option">
+			                                <i class="fa fa-cog"></i>
+			                            </a>
+			                            <a href="#" class="widget-collapse-option" data-toggle="collapse">
+			                                <i class="fa fa-chevron-up"></i>
+			                            </a>
+			                            <a href="#" class="widget-refresh-option">
+			                                <i class="fa fa-refresh"></i>
+			                            </a>
+			                            <a href="#" class="widget-remove-option">
+			                                <i class="fa fa-times"></i>
+			                            </a>
+			                        </span>
+                        </div>
+                        
+                        
+                        
+                        <div class="smart-widget-inner table-responsive">
+                            <table class="table table-striped no-margin">
+                                <thead>
+                                <tr>
+                                    <th class="text-right">店铺名</th>
+                                    <th class="text-right">店铺地址</th>
+                                    <th class="text-right">季销量</th>
+                                    <th class="text-right">排名</th>
+                                    <th class="text-right">好评率</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="text-right">绵阳烧烤</td>
+                                    <td class="text-right">银泰店</td>
+                                    <td class="text-right">6500单</td>
+                                    <td class="text-right">1</td>
+                                    <td class="text-right">
+                                        <div class="progress progress-sm inline-block m-bottom-none"
+                                             style="width:100px; margin-top:6px">
+                                            <div class="progress-bar progress-bar-success" style="width: 94.41%;">
+                                                <span class="sr-only">94.41% 好评</span>
+                                            </div>
+                                        </div>
+
+                                        <span class="m-left-sm vertical-top">94.41%</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-right">书亦烧仙草</td>
+                                    <td class="text-right">天府广场店</td>
+                                    <td class="text-right">5000单</td>
+                                    <td class="text-right">2</td>
+                                    <td class="text-right">
+                                        <div class="progress progress-sm inline-block m-bottom-none"
+                                             style="width:100px; margin-top:6px">
+                                            <div class="progress-bar progress-bar-warning" style="width: 90.92%;">
+                                                <span class="sr-only">90.92% 好评</span>
+                                            </div>
+                                        </div>
+
+                                        <span class="m-left-sm vertical-top">90.92%</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-right">吴氏纸包鱼</td>
+                                    <td class="text-right">天府三街店</td>
+                                    <td class="text-right">4600单</td>
+                                    <td class="text-right">3</td>
+                                    <td class="text-right">
+                                        <div class="progress progress-sm inline-block m-bottom-none"
+                                             style="width:100px; margin-top:6px">
+                                            <div class="progress-bar progress-bar-danger" style="width: 88.17%;">
+                                                <span class="sr-only">88.17% 好评</span>
+                                            </div>
+                                        </div>
+
+                                        <span class="m-left-sm vertical-top">88.17%</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="text-right">九江麻辣香锅</td>
+                                    <td class="text-right">春熙路店</td>
+                                    <td class="text-right">4400单</td>
+                                    <td class="text-right">4</td>
+                                    <td class="text-right">
+                                        <div class="progress progress-sm inline-block m-bottom-none"
+                                             style="width:100px; margin-top:6px">
+                                            <div class="progress-bar progress-bar-success" style="width: 84.11%;">
+                                                <span class="sr-only">84.11% 完成</span>
+                                            </div>
+                                        </div>
+
+                                        <span class="m-left-sm vertical-top">84.11%</span>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- ./smart-widget-inner -->
+                    </div><!-- ./smart-widget -->
+                </div><!-- ./col -->
+                
+                
+                
+                
+                <div class="col-lg-4">
+                    <div class="smart-widget">
+                        <div class="smart-widget-header">
+                            <span class="badge badge-danger pull-right">10</span>
+                 店铺收藏           
+                        </div>
+                        <div class="smart-widget-inner">
+                            <div class="smart-widget-body clearfix">
+                                <div class="search-input pull-left">
+                                    <input type="text" class="form-control input-sm">
+                                    <a href="#" class="input-icon text-normal"><i
+                                            class="ion-ios7-search-strong"></i></a>
+                                </div>
+                                <a class="btn btn-success btn-sm pull-right"><i class="fa fa-plus"></i>添加收藏 </a>
+                            </div>
+                            <ul class="list-group to-do-list sortable-list no-border">
+                                <li class="list-group-item" draggable="true">
+                                    <div class="custom-checkbox todo-checkbox">
+                                        <input type="checkbox" value="None" id="todo-check1">
+                                        <label for="todo-check1"></label>
+                                    </div>
+                                    云南过桥米线
+                                    <div class="remove-list">
+                                        <i class="ion-close"></i>
+                                    </div>
+                                </li>
+                                <li class="list-group-item" draggable="true">
+                                    <div class="custom-checkbox todo-checkbox">
+                                        <input type="checkbox" id="todo-check2">
+                                        <label for="todo-check2"></label>
+                                    </div>
+                                    小龙坎火锅
+                                    <div class="remove-list">
+                                        <i class="ion-close"></i>
+                                    </div>
+                                </li>
+                                <li class="list-group-item" draggable="true">
+                                    <div class="custom-checkbox todo-checkbox">
+                                        <input type="checkbox" id="todo-check3">
+                                        <label for="todo-check3"></label>
+                                    </div>
+                                    乡村基天府三街店
+                                    <div class="remove-list">
+                                        <i class="ion-close"></i>
+                                    </div>
+                                </li>
+                                <li class="list-group-item" draggable="true">
+                                    <div class="custom-checkbox todo-checkbox">
+                                        <input type="checkbox" id="todo-check4">
+                                        <label for="todo-check4"></label>
+                                    </div>
+                                    必胜客披萨
+                                    <div class="remove-list">
+                                        <i class="ion-close"></i>
+                                    </div>
+                                </li>
+                                <li class="list-group-item" draggable="true">
+                                    <div class="custom-checkbox todo-checkbox">
+                                        <input type="checkbox" id="todo-check5">
+                                        <label for="todo-check5"></label>
+                                    </div>
+             coco奶茶                       
+                                    <div class="remove-list">
+                                        <i class="ion-close"></i>
+                                    </div>
+                                </li>
+                                <li class="list-group-item" draggable="true">
+                                    <div class="custom-checkbox todo-checkbox">
+                                        <input type="checkbox" id="todo-check6">
+                                        <label for="todo-check6"></label>
+                                    </div>
+              韩式炸鸡
+                                    <div class="remove-list">
+                                        <i class="ion-close"></i>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div><!-- ./smart-widget-inner -->
+                    </div><!-- ./smart-widget -->
+                    <div class="task-widget maskSpecial">
+                        <div class="task-widget-body clearfix">
+                            <div class="pie-chart-wrapper">
+                                <div class="chart task-pie-chart line-normal" data-percent="73">
+                                    <h1 class="m-top-lg m-bottom-none">30</h1>
+                                    <div>当前排名</div>
+                                </div>
+                            </div>
+                            <div class="widget-detail">
+                                <small class="text-upper text-muted block font-sm">好评率</small>
+                                <h1 class="no-margin">79%</h1>
+                            </div>
+                        </div><!-- ./task-widget-body -->
+                        <div class="task-widget-statatistic">
+                            <ul class="clearfix">
+                                <li class="bg-grey border-success">
+                                    <div class="text-muted text-upper font-sm">销量</div>
+                                    2311
+                                </li>
+                                <li class="bg-grey border-danger">
+                                    <div class="text-muted text-upper font-sm">失败订单</div>
+                                    32
+                                </li>
+                                <li class="bg-grey border-purple">
+                                    <div class="text-muted text-upper font-sm">销售额</div>
+                                    32188
+                                </li>
+                            </ul><!-- ./row -->
+                        </div>
+                    </div><!-- ./task-widget -->
+                </div><!-- ./col -->
+            </div><!-- ./row -->
+
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="panel panel-default weather-widget">
+                        <div class="panel-body bg-success text-white">
+                            
+                                <div>
+	                                <img src="../../static/images/huoguo.jpg" width="250px" height="200px" />
+                                 </div>
+                                 
+                                 <!--空白
+                            <div class="m-top-md m-bottom-md text-center">
+                                <canvas id="skycon1" width="120" height="120"></canvas>
+                            </div>
+-->
+                            
+                        </div>
+                        <div class="panel-footer bg-white text-center padding-md">
+                            <div class="h4 text-upper">重庆<i class="fa fa-map-marker"></i></div>
+                            <div class="text-muted font-12 m-top-xs">吴铭火锅</div>
+                        </div>
+                    </div><!-- ./panel -->
+                </div><!-- ./col -->
+                
+                
+                <div class="col-md-3">
+                    <div class="panel panel-default weather-widget">
+                        <div class="panel-body bg-warning text-white">
+                          
+                                  <div>
+	                                <img src="../../static/images/naicha.jpg" width="250px" height="200px" />
+                                 </div>
+                        </div>
+                        <div class="panel-footer bg-white text-center padding-md">
+                            <div class="h4 text-upper">绵阳 <i class="fa fa-map-marker"></i></div>
+                            <div class="text-muted font-12 m-top-xs">coco奶茶</div>
+                        </div>
+                    </div><!-- ./panel -->
+                </div><!-- ./col -->
+                
+                
+                <div class="col-md-3">
+                    <div class="panel panel-default weather-widget">
+                        <div class="panel-body bg-danger text-white">
+                            <div>
+	                                <img src="../../static/images/bingqilin.jpg" width="250px" height="200px" />
+                                 </div>
+                          
+                        </div>
+                        <div class="panel-footer bg-white text-center padding-md">
+                            <div class="h4 text-upper">太古里 <i class="fa fa-map-marker"></i></div>
+                            <div class="text-muted font-12 m-top-xs">巴黎甜甜</div>
+                        </div>
+                    </div><!-- ./panel -->
+                </div><!-- ./col -->
+                <div class="col-md-3">
+                    <div class="panel panel-default weather-widget">
+                        <div class="panel-body bg-info text-white">
+                            
+
+                          <div>
+	                                <img src="../../static/images/mixian.jpg" width="250px" height="200px" />
+                                 </div>
+                          
+
+                           
+                        </div>
+                        <div class="panel-footer bg-white text-center padding-md">
+                            <div class="h4 text-upper">云南 <i class="fa fa-map-marker"></i></div>
+                            <div class="text-muted font-12 m-top-xs">过桥米线</div>
+                        </div>
+                    </div><!-- ./panel -->
+                </div><!-- ./col -->
+            </div>
+            
+            
+            
+        </div><!-- ./padding-md -->
+    </div><!-- /main-container -->
+
+    <footer class="footer">
+				<span class="footer-brand">
+					<strong class="text-danger">外卖订餐</strong>
+				</span>
+        <p class="no-margin">
+            &copy; 2019 <strong>外卖订餐系统</strong>call1008611
+        </p>
+    </footer>
+</div><!-- /wrapper -->
+
+<a href="#" class="scroll-to-top hidden-print"><i class="fa fa-chevron-up fa-lg"></i></a>
+
+<!-- Delete Widget Confirmation -->
+<div class="custom-popup delete-widget-popup delete-confirmation-popup" id="deleteWidgetConfirm">
+    <div class="popup-header text-center">
+				<span class="fa-stack fa-4x">
+				  <i class="fa fa-circle fa-stack-2x"></i>
+				  <i class="fa fa-lock fa-stack-1x fa-inverse"></i>
+				</span>
+    </div>
+    <div class="popup-body text-center">
+        <h5>是否要删除此小部件?</h5>
+        <strong class="block m-top-xs"><i class="fa fa-exclamation-circle m-right-xs text-danger"></i>这样操作将无法恢复</strong>
+
+        <div class="text-center m-top-lg">
+            <a class="btn btn-success m-right-sm remove-widget-btn">删除</a>
+            <a class="btn btn-default deleteWidgetConfirm_close">取消</a>
+        </div>
+    </div>
+</div>
+
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="../../static/js/InitialData.js"></script>
+<!-- Jquery -->
+<script src="../../static/js/jquery-1.11.1.min.js"></script>
+
+
+<!-- Bootstrap -->
+<script src="../../static/js/bootstrap.min.js"></script>
+
+<!-- Flot -->
+<script src='../../static/js/jquery.flot.min.js'></script>
+
+<!-- Slimscroll -->
+<script src='../../static/js/jquery.slimscroll.min.js'></script>
+
+<!-- Morris -->
+<script src='../../static/js/rapheal.min.js'></script>
+<script src='../../static/js/morris.min.js'></script>
+
+<!-- Datepicker -->
+<script src='../../static/js/uncompressed/datepicker.js'></script>
+
+<!-- Sparkline -->
+<script src='../../static/js/sparkline.min.js'></script>
+
+<!-- Skycons -->
+<script src='../../static/js/uncompressed/skycons.js'></script>
+
+<!-- Popup Overlay -->
+<script src='../../static/js/jquery.popupoverlay.min.js'></script>
+
+<!-- Easy Pie Chart -->
+<script src='../../static/js/jquery.easypiechart.min.js'></script>
+
+<!-- Sortable -->
+<script src='../../static/js/uncompressed/jquery.sortable.js'></script>
+
+<!-- Owl Carousel -->
+<script src='../../static/js/owl.carousel.min.js'></script>
+
+<!-- Modernizr -->
+<script src='../../static/js/modernizr.min.js'></script>
+
+<!-- Simplify -->
+<script src="../../static/js/simplify/simplify.js"></script>
+<script src="../../static/js/simplify/simplify_dashboard.js"></script>
+<script src="../../static/js/index.js"></script>
+
+<script>
+    $(function () {
+        $('.chart').easyPieChart({
+            easing: 'easeOutBounce',
+            size: '140',
+            lineWidth: '7',
+            barColor: '#7266ba',
+            onStep: function (from, to, percent) {
+                $(this.el).find('.percent').text(Math.round(percent));
+            }
+        });
+
+        $('.sortable-list').sortable();
+
+        $('.todo-checkbox').click(function () {
+
+            var _activeCheckbox = $(this).find('input[type="checkbox"]');
+
+            if (_activeCheckbox.is(':checked')) {
+                $(this).parent().addClass('selected');
+            } else {
+                $(this).parent().removeClass('selected');
+            }
+
+        });
+
+        //Delete Widget Confirmation
+        $('#deleteWidgetConfirm').popup({
+            vertical: 'top',
+            pagecontainer: '.container',
+            transition: 'all 0.3s'
+        });
+    });
+
+</script>
+
+</body>
+</html>
